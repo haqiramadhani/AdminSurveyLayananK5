@@ -153,7 +153,7 @@ export default function Dashboard() {
   const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   useEffect(() => {
-    Axios.get('http://3.90.7.176:8080/survey')
+    Axios.get('//3.90.7.176:8080/survey')
     .then(r => {
       setAllSurveys(r.data.results.sort(descending));
       setTotalSurveys(r.data.results.length);
@@ -162,7 +162,7 @@ export default function Dashboard() {
   }, []);
 
   useEffect(() => {
-    Axios.get('http://3.90.7.176:8080/voice')
+    Axios.get('//3.90.7.176:8080/voice')
     .then(r => {
       setAllVoiceNotes(r.data.results.sort(descending));
       setTotalVoiceNotes(r.data.results.length);
@@ -171,7 +171,7 @@ export default function Dashboard() {
   }, []);
 
   useEffect(() => {
-    Axios.get('http://3.90.7.176:8080/team')
+    Axios.get('//3.90.7.176:8080/team')
     .then(r => {
       setAllTeams(r.data.results.sort(descending));
       setTotalTeams(r.data.results.length);
